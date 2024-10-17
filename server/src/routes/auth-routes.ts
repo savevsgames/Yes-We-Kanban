@@ -11,14 +11,14 @@ export const login = async (req: Request, res: Response) => {
     where: { username },
   });
   if (!user) {
-    return res.status(401).json({ error: "Authentication failed." });
+    return res.status(401).json({ error: "Authentication failed broheim." });
   }
 
   // If password is valid we can generate a token - use bcrypt compare method on the
   // typed/hashed password and the "User" instance's hashed password value in the db
   const passwordValid = await bcrypt.compare(password, user.password);
   if (!passwordValid) {
-    return res.status(401).json({ error: "Authentication failed." });
+    return res.status(401).json({ error: "Authentication failed bro." });
   }
 
   // Generate a token with the secret key and the user's id
