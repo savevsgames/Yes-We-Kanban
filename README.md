@@ -35,38 +35,46 @@
 
 ## Installation
 
-1. Clone the repository:
+1.  Clone the repository:
 
-   ```bash
-   git clone https://github.com/savevsgames/Yes-We-Kanban.git
-   cd Yes-We-Kanban
-   ```
+    ```bash
+    git clone https://github.com/savevsgames/Yes-We-Kanban.git
+    cd Yes-We-Kanban
+    ```
 
-2. Install dependencies for both **client** and **server**:
+2.  Install dependencies for both **client** and **server**:
 
-   ```bash
-   cd client && npm install
-   cd ../server && npm install
-   ```
+    ```bash
+    cd client && npm install
+    cd ../server && npm install
+    ```
 
-3. Set up environment variables:
+3.  Set up environment variables:
 
-   - Create a `.env` file in the `server` directory with the following:
-     ```
-     JWT_SECRET_KEY=your-secret-key
-     DB_USERNAME=your-db-username
-     DB_PASSWORD=your-db-password
-     ```
+    - Create a `.env` file in the `server` directory with the following:
+      ```
+      JWT_SECRET_KEY=your-secret-key
+      DB_USERNAME=your-db-username
+      DB_PASSWORD=your-db-password
+      ```
 
-4. Start the development servers:
+4.  Start the development servers:
 
-   ```bash
-   # Start server
-   cd server && npm start
+    ```bash
+    # Start server
+    cd server && npm start
 
-   # Start client
-   cd client && npm run dev
-   ```
+    # Start client
+    cd client && npm run dev
+    ```
+
+5.  Log in as one of the users in the hosted database:
+
+    { username: "ScriptWizard", password: "semicolon" },
+    { username: "BugHunter", password: "debugging" },
+    { username: "ReactRandy", password: "jsxalltheway" },
+    { username: "SQLSally", password: "3nFUN" },
+    { username: "MongoMona", password: "nosqlforme" }
 
 ---
 

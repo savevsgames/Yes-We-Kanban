@@ -16,6 +16,7 @@ app.use(express.static("../client/dist"));
 app.use(express.json());
 app.use(routes);
 
+// force: forceDatabaseRefresh will drop all tables and recreate them when sequelize.sync() is called
 sequelize.sync({ force: forceDatabaseRefresh }).then(() => {
   app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
