@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter Tight", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -13,13 +13,13 @@
 }
 
 /* webkit solution */
-::-webkit-input-placeholder { 
-  text-align:right; 
+::-webkit-input-placeholder {
+  text-align: right;
 }
 
 /* mozilla solution */
-input:-moz-placeholder { 
-  text-align:right; 
+input:-moz-placeholder {
+  text-align: right;
 }
 
 a {
@@ -32,7 +32,7 @@ a:hover {
 }
 
 body {
-  background: #ECF0F1;
+  background: #ecf0f1;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-position: center center;
@@ -100,12 +100,35 @@ tbody tr:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: larger;
+  font-size: 1.25rem;
   font-weight: 900;
 }
 
+.kanban-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: pulse 6s infinite; /* Animation name is pulse */
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .nav-title a {
-  color: #b864c4;
+  color: #4855a0;
 }
 
 .nav-item {
@@ -133,71 +156,109 @@ tbody tr:nth-child(odd) {
 }
 
 .board-display {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 95vw;
+  margin: auto;
 }
 
 .swim-lane {
   text-align: center;
   font-weight: 500;
-  width: 33%;
-  height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 5px;
-  padding: 5px;
+  padding: 2rem;
+  width: 90%;
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .todo {
-  background-color: #e9cbec;
+  background-color: #9ea9c0;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .inprogress {
-  background-color: #b864c4;
+  background-color: #babe8f;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .done {
-  background-color: #732381;
+  background-color: #68a063;
+  border-radius: 2rem 0 0 2rem;
 }
 
 .ticket-card {
+  min-width: 100%;
   text-align: left;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.3);
   border: 0.1em solid black;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.swimlane-title {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.ticket-title {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .container {
   /* margin: auto; */
   width: 100%;
+  background-color: #ffffff;
   /* height: 90%; */
 }
 
 #create-ticket-link {
   display: block;
-  margin-left: auto;
+  margin: 1rem 2rem 1rem auto;
+  box-shadow: 1px 1px 10px 10px rgba(83, 131, 204, 0.75);
 }
-
 
 .form {
   width: 60%;
   height: 80%;
-  background-color: #b864c4;
+  background-color: #9ea9c0;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+  box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.form > h1, .form > label {
-  color: yellow;
+.form > h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.form > label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #000000;
 }
 
 .form > input {
   width: 200px;
-  
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff !important;
 }
 
 .form > label {
@@ -213,6 +274,7 @@ tbody tr:nth-child(odd) {
   resize: both;
   min-height: 30px;
   min-width: 30px;
+  background-color: #ffffff !important;
 }
 
 .editBtn {
@@ -241,7 +303,6 @@ tbody tr:nth-child(odd) {
   align-items: center;
   justify-content: center;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
