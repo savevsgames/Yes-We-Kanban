@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: "20.x"
 
       - name: Install Dependencies
         run: |
@@ -31,3 +31,6 @@ jobs:
           DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
         run: |
           npm run seed
+
+      - name: Enable Debug Logs
+        run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
