@@ -16,10 +16,10 @@ const sequelize = dbConnectionString
   ? new Sequelize(dbConnectionString, {
       dialect: "postgres",
       dialectOptions: {
-        ssl: {
-          require: true,
-          rejectUnauthorized: false, // Allows SSL conn.
-        },
+        ssl: process.env.DB_ENABLE_SSL === 'true' ? { 
+          require: true, 
+          rejectUnauthorized: false 
+        } : false,
         decimalNumbers: true,
       },
       logging: false,
