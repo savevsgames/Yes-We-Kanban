@@ -26,4 +26,4 @@ jobs:
         env:
           DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
         run: |
-          node server/dist/seeds/index.js
+          npm run seed
