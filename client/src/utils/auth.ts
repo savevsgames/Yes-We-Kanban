@@ -35,8 +35,13 @@ class AuthService {
 
   login(idToken: string) {
     // TODO: set the token to localStorage
-    const token = idToken;
-    localStorage.setItem("id_token", token);
+    if (!idToken) {
+      console.error("No token provided for login.");
+      return;
+    }
+
+    console.log("Storing token:", idToken); // Debugging log
+    localStorage.setItem("id_token", idToken);
     // TODO: redirect to the home page
     window.location.assign("/");
   }
