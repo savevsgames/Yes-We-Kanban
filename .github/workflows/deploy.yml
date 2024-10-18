@@ -25,6 +25,11 @@ jobs:
           cd server
           npm install
 
+      - name: Compile TypeScript
+        run: |
+          cd server
+          npx tsc
+
       - name: Debug Connection String
         run: echo $DB_CONNECTION_STRING
 
@@ -32,7 +37,7 @@ jobs:
         env:
           DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
         run: |
-          npm run seed
+          cd server && npm run seed
 
       - name: Enable Debug Logs
         run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
