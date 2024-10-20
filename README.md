@@ -13,6 +13,7 @@
 - [Yes-We-Kanban](#yes-we-kanban)
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
+  - [Deployment](#deployment)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Features](#features)
@@ -20,7 +21,6 @@
   - [API Reference](#api-reference)
     - [POST /auth/login](#post-authlogin)
   - [Screenshots](#screenshots)
-  - [Deployment](#deployment)
   - [Contributing](#contributing)
   - [License](#license)
   - [Contact](#contact)
@@ -30,6 +30,12 @@
 ## Description
 
 **Yes-We-Kanban** is a full-stack Kanban board application designed for agile project management. It provides a visual way to track tasks across multiple statuses and ensures a secure user experience using **JWT-based authentication**. This project follows modern full-stack development practices using **React** for the frontend and **Node.js/Express** for the backend, with **PostgreSQL** as the database. The app is deployed using **Render** for easy accessibility.
+
+---
+
+## Deployment
+
+The application is deployed on **Render**.
 
 See the project in action here (may take up to 60 seconds to start up servers): [RENDER DEPLOY](https://yes-we-kanban.onrender.com/)
 
@@ -81,6 +87,8 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
     ```
 
 5.  Log in as one of the users in the hosted database:
+6.  
+    Set up your SQL database and environment variables for it, then use the seed script to populate it. Once your database has information, you can log in as one of these user names (or change them and set your own).
 
     { username: "ScriptWizard", password: "semicolon" },
     { username: "BugHunter", password: "debugging" },
@@ -149,15 +157,6 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
 ![Landing Page](./readme_media/screenshot01.png)
 ![Login Page](./readme_media/screenshot02.png)
 ![Kanban Board](./readme_media/screenshot03.png)
-
----
-
-## Deployment
-
-The application is deployed on **Render**.
-
-- **Live Application**: [Deployed Link - TBD](#)
-- **Backend Repository**: [Yes-We-Kanban Backend](https://github.com/savevsgames/Yes-We-Kanban)
 
 ---
 
