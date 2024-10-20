@@ -10,7 +10,7 @@ const dbUser = process.env.DB_USER || "";
 const dbPassword = process.env.DB_PASSWORD || "";
 const dbHost = process.env.DB_HOST || "localhost";
 const dbConnectionString =
-  process.env.DB_CONNECTION_STRING || process.env.DB_URL;
+  process.env.DB_CONNECTION_STRING;
 
 const sequelize = dbConnectionString
   ? new Sequelize(dbConnectionString, {

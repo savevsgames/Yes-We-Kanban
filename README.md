@@ -31,7 +31,9 @@
 
 **Yes-We-Kanban** is a full-stack Kanban board application designed for agile project management. It provides a visual way to track tasks across multiple statuses and ensures a secure user experience using **JWT-based authentication**. This project follows modern full-stack development practices using **React** for the frontend and **Node.js/Express** for the backend, with **PostgreSQL** as the database. The app is deployed using **Render** for easy accessibility.
 
-See the project in action here(may take up to 60s to start up servers): [RENDER DEPLOY](https://yes-we-kanban.onrender.com/)
+See the project in action here (may take up to 60 seconds to start up servers): [RENDER DEPLOY](https://yes-we-kanban.onrender.com/)
+
+There are two free instance render deployments connected to the project (one for the service and one for the database). It will take some time to spin up both instances since the first one must load before calling for the second. Please allow **2 minutes** and refresh. That should be sufficient time.
 
 Log in as one of the users in the hosted database and explore the YesWeKanban! board for yourself:
 
@@ -144,8 +146,9 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
 
 ## Screenshots
 
-![Login Page](./assets/login-page.png)
-![Kanban Board](./assets/kanban-board.png)
+![Landing Page](./readme_media/screenshot01.png)
+![Login Page](./readme_media/screenshot02.png)
+![Kanban Board](./readme_media/screenshot03.png)
 
 ---
 
