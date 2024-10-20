@@ -147,7 +147,7 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
 - **Response**:
   ```json
   {
-    "token": "jwt-token-here"
+    "token": "salted-jwt-token"
   }
   ```
 
