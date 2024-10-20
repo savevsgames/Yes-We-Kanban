@@ -86,15 +86,16 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
     cd client && npm run dev
     ```
 
-5.  Log in as one of the users in the hosted database:
-6.  
-    Set up your SQL database and environment variables for it, then use the seed script to populate it. Once your database has information, you can log in as one of these user names (or change them and set your own).
+5.  Set up your SQL database and environment variables for it, then use the seed script to populate it. Once your database has information, you can log in as one of these user names (or change them and set your own).
 
+    ```bash
     { username: "ScriptWizard", password: "semicolon" },
     { username: "BugHunter", password: "debugging" },
     { username: "ReactRandy", password: "jsxalltheway" },
     { username: "SQLSally", password: "3nFUN" },
     { username: "MongoMona", password: "nosqlforme" }
+
+    ```
 
 ---
 
@@ -102,7 +103,7 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
 
 1. Navigate to the login page and authenticate with your username and password.
 2. Upon successful login, you will be redirected to the Kanban board.
-3. Add, update, or delete tasks and manage their statuses using drag-and-drop functionality.
+3. Add, update, or delete tasks and manage your todo's with ease.
 4. Use the logout button to safely exit the session.
 
 ---
@@ -112,7 +113,7 @@ Log in as one of the users in the hosted database and explore the YesWeKanban! b
 - **JWT Authentication**: Secure login system with token-based authentication.
 - **Task Management**: Add, update, and delete tasks with drag-and-drop support.
 - **Protected Routes**: Pages are accessible only to authenticated users.
-- **Session Expiration**: Inactive sessions are automatically logged out.
+- **Session Expiration**: Inactive sessions are automatically logged out after 1 hr.
 
 ---
 
